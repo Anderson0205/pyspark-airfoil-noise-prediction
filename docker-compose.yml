@@ -1,0 +1,11 @@
+services:
+  notebook:
+    build: .
+    env_file:
+      - .env
+
+    volumes:
+      - ./:/workspace
+
+    ports:
+      - "127.0.0.1:8889:8888"
